@@ -12,13 +12,22 @@ export default createVuetify({
     themes: {
       light: {
         colors: {
-          //primary: '#1867C0',
-          //secondary: '#5CBBF6',
           primary: "#000000",
           secondary: "#000000",
           accent: "#000000",
           error: "#000000",
-          background: "#000000"
+          background: "#000000",
+
+          //My colors
+          //-------------------------
+          cardsIconColor: "#e4ecfa",
+          cardsCircleColor: "#395a9d",
+          cardsTitleColor: "#595667",
+
+          workTimelineTitleColor: "#595667",
+          workTimelineDotsColor: "#5d7ec2",
+
+          //-------------------------
         },
       },
     },

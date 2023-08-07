@@ -1,14 +1,13 @@
 <template>
-    <v-card class="elevation-13">
-        <v-card-title class="text-h6 text-md-h5 text-lg-h4">
-            <v-btn v-if="icon" color="#395a9d" class="elevation-0 mr-2" :ripple="false" icon>
-                <v-icon color="#e4ecfa" :icon="icon"></v-icon>
+    <v-card class="elevation-13 ml-2 mt-2">
+        <v-card-title class="text-h6 text-md-h5 text-lg-h4 text-cardsTitleColor">
+            <v-btn v-if="icon" color="cardsCircleColor" class="elevation-0 mr-2" :ripple="false" icon>
+                <v-icon color="cardsIconColor" :icon="icon"></v-icon>
             </v-btn>
-            <font color="#595667"> {{ title }}</font>
+             {{ title }}
         </v-card-title>
-        <v-card-text>
-            {{ text }}
-        </v-card-text>
+
+        <slot></slot>
     </v-card>
 </template>
 
@@ -19,7 +18,6 @@ export default {
         }
     },
     props: {
-        text: String,
         icon: String,
         title: String
     }
