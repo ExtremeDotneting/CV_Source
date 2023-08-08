@@ -27,6 +27,10 @@ export default createVuetify({
           workTimelineTitleColor: "#595667",
           workTimelineDotsColor: "#5d7ec2",
 
+          skillChipColor:"#000000",
+
+          languageKnowledgeLevel:"#1867c0",
+          langNameColor:"#595667"
           //-------------------------
         },
       },

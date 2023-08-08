@@ -1,13 +1,46 @@
 <template>
-    <v-container>
-        <v-row no-gutters>
-            <v-col sm="12" md="12">
-                <MyCard :title="myName">
-                    <v-card-text>
-                        1<br>2
-                    </v-card-text>
-                </MyCard>
+    <div id="mainDivElement">
 
+        <v-row no-gutters class="mr-1 ml-n1">
+            <v-col sm="12" md="12">
+                <v-card class="elevation-11 ml-2 mt-2">
+                    <v-img height="130" src="/images/titleBackground.png" cover style="z-index: -10;">
+                        <v-card-title class="text-h5 text-white " style="z-index:1000;">
+                            <div class="float-right mt-1 mr-1">
+                                <img src="/images/icons/downloadPDF.png" width="70" id="downloadPdfIcon">
+                            </div>
+                            <div class="text-h4" style="margin-left: 130px;margin-top: 30px;">{{ myName }}</div>
+                            <div class="text-h6 font-italic" style="margin-left: 130px;">{{ workPosition }}</div>
+                        </v-card-title>
+                    </v-img>
+
+
+                    <img src="/images/portraits/portrait.jpg" width="100" height="130" class="ml-8 rounded-sm elevation-9"
+                        style="border: 1px solid; border-color: black; margin-top: -100px;">
+
+
+                    <div><br></div>
+                    <div class="text-center">
+                        <v-menu open-on-hover>
+                            <template v-slot:activator="{ props }">
+                                <v-btn color="primary" v-bind="props">
+                                    <img :src="`https://flagcdn.com/16x12/${currentTranslate.shortName}.png`" width="16"
+                                        height="12">
+                                    {{ }}
+                                </v-btn>
+                            </template>
+
+                            <v-list>
+                                <v-list-item v-for="(item, index) in translates" :key="index">
+                                    <v-list-item-title>
+                                        <img :src="`https://flagcdn.com/16x12/${item.shortName}.png`" width="16"
+                                            height="12">
+                                    </v-list-item-title>
+                                </v-list-item>
+                            </v-list>
+                        </v-menu>
+                    </div>
+                </v-card>
             </v-col>
 
             <v-col sm="12" md="8">
@@ -26,64 +59,21 @@
                                 <div>
                                     <h2 :class="`mt-n1 headline  text-workTimelineTitleColor mb-3`">
                                         {{ workItem.companyName }}
-                                        <img v-for="fileName in workItem.companyLogos" :src="`./images/companiesLogos/${fileName}`" height="40"
-                                            style="max-width:70px" class="mb-n3 ml-1">
+                                        <img v-for="companyLogo in workItem.companyLogos"
+                                            :src="`./images/companiesLogos/${companyLogo.fileName}`"
+                                            :height="companyLogo.height" :width="companyLogo.width" class="mb-n3 ml-1">
                                     </h2>
                                     <h3 :class="`mt-n1 headline font-weight-light `">
                                         {{ workItem.position }}
                                     </h3>
                                     <div
-                                        :class="`pt-1 headline font-weight-light font-italic text-${workTimelineTitleColor} mb-4`">
+                                        :class="`pt-1 headline font-weight-light font-italic text-${workTimelineTitleColor} mb-3`">
                                         {{ workItem.dateOfWork }}
                                     </div>
                                     <div v-html="workItem.text">
 
                                     </div>
                                 </div>
-                            </v-timeline-item>
-                        </v-timeline>
-
-                        <br>
-                        <p>---------------</p>
-                        <br>
-
-                        <div class="font-weight-bold ms-1 mb-2">
-                            Today
-                        </div>
-
-                        <v-timeline density="compact" align="start">
-                            <v-timeline-item v-for="message in timelineTest1" :key="message.time" :dot-color="message.color"
-                                size="x-small">
-                                <div class="mb-4">
-                                    <div class="font-weight-normal">
-                                        <strong>{{ message.from }}</strong> @{{ message.time }}
-                                    </div>
-                                    <div>{{ message.message }}</div>
-                                </div>
-                            </v-timeline-item>
-                        </v-timeline>
-
-                        <br>
-                        <p>---------------</p>
-                        <br>
-
-                        <v-timeline>
-
-                            <v-timeline-item v-for="(item, i) in timelineTest2" :key="i" :dot-color="item.color"
-                                :icon="item.icon" fill-dot>
-                                <v-card>
-                                    <v-card-title :class="['text-h6', `bg-${item.color}`]">
-                                        Lorem Ipsum Dolor
-                                    </v-card-title>
-                                    <v-card-text class="bg-white text--primary">
-                                        <p>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet
-                                            nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim
-                                            zril disputando voluptatibus, vix an salutandi sententiae.</p>
-                                        <v-btn :color="item.color" variant="outlined">
-                                            Button
-                                        </v-btn>
-                                    </v-card-text>
-                                </v-card>
                             </v-timeline-item>
                         </v-timeline>
                     </v-card-text>
@@ -97,35 +87,53 @@
             </v-col>
 
             <v-col sm="12" md="4">
-                <MyCard :title="skillsTitle" :icon="skillsIcon">
+                <v-card class="elevation-11 ml-2 mt-2">
+                    <MyCardTitle :title="skillsTitle" :icon="skillsIcon" class="mt-2"></MyCardTitle>
                     <v-card-text>
-
-                        <v-chip-group>
-                            <v-chip variant="outlined" v-for="skill in skills">
+                        <div v-for="skillGroup in skills" class="">
+                            <v-chip variant="outlined" v-for="skill in skillGroup" color="skillChipColor"
+                                style="margin: 2px; zoom: 0.8;">
                                 {{ skill }}
                             </v-chip>
-                        </v-chip-group>
+                        </div>
                     </v-card-text>
-                </MyCard>
 
-                <MyCard :title="languagesTitle" :icon="languagesIcon">
+
+                    <MyCardTitle :title="languagesTitle" :icon="languagesIcon" class="mt-2"> </MyCardTitle>
                     <v-card-text>
-                        1<br>2
+                        <v-list-item v-for="item in languagesList" class="ml-n1">
+                            <template v-slot:prepend>
+                                <div class="mr-3">
+                                    <span class="text-h6 text-langNameColor"> {{ item.lang }} </span>
+                                </div>
+                            </template>
+                            <v-progress-linear :model-value="item.percent * 100" color="languageKnowledgeLevel" height="10"
+                                rounded></v-progress-linear>
+                            <template v-slot:append>
+                                <div class="ml-2">
+                                    <span class="d-flex justify-end"> {{ item.level }} </span>
+                                </div>
+                            </template>
+                        </v-list-item>
                     </v-card-text>
-                </MyCard>
 
-                <MyCard :title="contactsTitle" :icon="contactsIcon">
-                    <p v-for="num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">++++ {{ num }} ++++</p>
-                </MyCard>
+
+                    <MyCardTitle :title="contactsTitle" :icon="contactsIcon" class="mt-2"> </MyCardTitle>
+                    <v-card-text>
+                        ++++
+                    </v-card-text>
+                </v-card>
+
+
 
             </v-col>
         </v-row>
-    </v-container>
+    </div>
 </template>
-
 
 <script>
 import MyCard from './MyCard.vue'
+import MyCardTitle from './MyCardTitle.vue'
 
 //Help functions
 function escapeStringToHtml(str) {
@@ -135,11 +143,18 @@ function escapeStringToHtml(str) {
 //Export current model
 export default {
     components: {
-        MyCard
+        MyCard, MyCardTitle
     },
     data() {
         return {
+            currentTranslate: { title: "English", shortName: "gb" },
+            translates: [
+                { title: "Russian", shortName: "ru" },
+                { title: "Ukrainian", shortName: "ua" }
+            ],
+
             myName: "YURII MYSKO",
+            workPosition: "C# Developer",
 
             aboutMeTitle: "ABOUT ME",
             aboutMeIcon: "mdi-account",
@@ -147,14 +162,39 @@ export default {
 
             skillsTitle: "SKILLS",
             skillsIcon: "mdi-pencil-ruler",
-            skills: ["C#", ".NET"],
+            skills: [
+                ["C#", "ASP.NET", "WPF", "XAML", "WinForms", "Xamarin"],
+                ["Vue.js", "Typescript"],
+                ["MS SQL", "PostgreSQL", "SQLite"],
+                ["MongoDB", "LiteDB"],
+                ["SOLID", "GoF patterns", "MVC", "MVVM"],
+                ["nUnit", "PuppeteerSharp", "Chromium"],
+                ["Unity"]
+            ],
 
             educationTitle: "EDUCATION",
             educationIcon: "mdi-school",
 
 
-            languagesTitle: "LANGUAGE",
+            languagesTitle: "LANGUAGES",
             languagesIcon: "mdi-translate",
+            languagesList: [
+                {
+                    lang: "RU",
+                    percent: 1,
+                    level: "Native"
+                },
+                {
+                    lang: "UA",
+                    percent: 1,
+                    level: "Native"
+                },
+                {
+                    lang: "EN",
+                    percent: 0.7,
+                    level: "B1"
+                }
+            ],
 
             contactsIcon: "mdi-contacts",
             contactsTitle: "CONTACTS",
@@ -168,8 +208,8 @@ export default {
                     companyName: "FOZZY Group (Silpo)",
                     position: "TeamLead C# Developer",
                     companyLogos: [
-                        "fozzy.png",
-                        "silpo.png"
+                        { fileName: "fozzy.png", width: 40, height: 40 },
+                        { fileName: "silpo.png", width: 80, height: 40 }
                     ],
                     dateOfWork: "Март 2021 – Май 2023",
                     text: " • Менторство. Управление командой разработчиков;<br> • Интеграция крупных систем: <a href=\"https://silpo.ua/\">Silpo</a>, <a href=\"https://maudau.com.ua/\">MauDau</a>, <a href=\"https://justin.ua/\">Justin</a>,  <a href=\"https://novaposhta.ua/\">NovaPoshta</a> и другие;<br> • <a href=\"https://www.nuget.org/profiles/KogerCoder\">Open-source разработка</a> востребованных библиотек;<br> • Разработка архитектуры приложений, микросервисная архитектура;<br> • Разработка серверов. Работа с облачными сервисами Azure, Amazon."
@@ -178,7 +218,7 @@ export default {
                     companyName: "R&D Team",
                     position: "Senior C# Developer",
                     companyLogos: [
-                        "RnD_Team.png"
+                        { fileName: "RnD_Team.png", width: 90, height: 40 }
                     ],
                     dateOfWork: "Август 2019 – Октябрь 2021",
                     text: " • Трейдинг-бот для <a href=\"https://www.binance.com/\">Binance</a>;<br> • Трейдинг-бот для биржи опционов <a href=\"https://www.deribit.com/\">Deribit</a>;<br> • ASP.NET сервисы;<br> • Работа с WebView и Chromium для автоматизации действий на веб-сайтах;<br> • Разработка обменника криптовалют."
@@ -194,73 +234,11 @@ export default {
                     companyName: "QWICC LLC",
                     position: "C# Developer",
                     companyLogos: [
-                        "qwicc.png"
+                        { fileName: "qwicc.png", width: 70, height: 40 }
                     ],
                     dateOfWork: "Июнь 2016 - Февраль 2017",
                     text: " • Разработка обменника криптовалют;<br> • Интеграция с нодами криптовалют Bitcoin, Ethereum, Tron, Tezos и др."
                 }
-            ],
-
-
-            timelineTest1: [
-                {
-                    from: 'You',
-                    message: `Sure, I'll see you later.`,
-                    time: '10:42am',
-                    color: 'deep-purple-lighten-1',
-                },
-                {
-                    from: 'John Doe',
-                    message: 'Yeah, sure. Does 1:00pm work?',
-                    time: '10:37am',
-                    color: 'green',
-                },
-                {
-                    from: 'You',
-                    message: 'Did you still want to grab lunch today?',
-                    time: '9:47am',
-                    color: 'deep-purple-lighten-1',
-                },
-            ],
-            timelineTest2: [
-                {
-                    color: 'red-lighten-2',
-                    icon: 'mdi-star',
-                },
-                {
-                    color: 'purple-lighten-2',
-                    icon: 'mdi-book-variant',
-                },
-                {
-                    color: 'green-lighten-1',
-                    icon: 'mdi-airballoon',
-                },
-                {
-                    color: 'indigo-lighten-2',
-                    icon: 'mdi-layers-triple',
-                },
-            ],
-            timelineTest3: [
-                {
-                    color: 'cyan',
-                    year: '1960',
-                },
-                {
-                    color: 'green',
-                    year: '1970',
-                },
-                {
-                    color: 'pink',
-                    year: '1980',
-                },
-                {
-                    color: 'amber',
-                    year: '1990',
-                },
-                {
-                    color: 'orange',
-                    year: '2000',
-                },
             ],
         }
     },
@@ -270,3 +248,14 @@ export default {
     }
 }
 </script>
+
+<style>
+#mainDivElement {
+    margin: auto;
+    max-width: 1200px;
+}
+
+#downloadPdfIcon:hover {
+    filter: invert(1)
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
-  <CV_Component />
+  <CV />
 </template>
 
 <script setup>
-  import CV_Component from '@/components/CV_Component.vue'
+  import CV from '@/components/CV.vue'
 </script>

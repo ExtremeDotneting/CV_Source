@@ -1,18 +1,17 @@
 <template>
-    <v-card class="elevation-13 ml-2 mt-2">
-        <v-card-title class="text-h6 text-md-h5 text-lg-h4 text-cardsTitleColor">
-            <v-btn v-if="icon" color="cardsCircleColor" class="elevation-0 mr-2" :ripple="false" icon>
-                <v-icon color="cardsIconColor" :icon="icon"></v-icon>
-            </v-btn>
-             {{ title }}
-        </v-card-title>
-
+    <v-card class="elevation-11 ml-2 mt-2">
+        <MyCardTitle :title="title" :icon="icon"></MyCardTitle>
         <slot></slot>
     </v-card>
 </template>
 
 <script>
+import MyCardTitle from "./MyCardTitle.vue"
+
 export default {
+    components: {
+        MyCardTitle
+    },
     data() {
         return {
         }
