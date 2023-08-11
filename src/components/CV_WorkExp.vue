@@ -1,5 +1,5 @@
 <template>
-    <MyCardTitle :title="workExpTitle" :icon="workExpIcon"></MyCardTitle>
+    <MyCardTitle :title="workExpTitle" icon="mdi-briefcase"></MyCardTitle>
     <v-card-text>
         <v-timeline align="start" density="compact" class="mt-n3">
             <v-timeline-item v-for="(workItem, i) in workExpTimelineList" :key="i" dot-color="workTimelineDotsColor"

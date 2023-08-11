@@ -25,11 +25,9 @@ var dataObj = {
         workPosition: "C# Developer",
 
         aboutMeTitle: "ABOUT ME",
-        aboutMeIcon: "mdi-account",
         aboutMeText: "Hi! Hi! Hi! Hi! <br>Hi! Hi! Hi! Hi! <br>Hi! Hi! Hi! Hi! <br>Hi! Hi! Hi! Hi!",
 
         skillsTitle: "SKILLS",
-        skillsIcon: "mdi-pencil-ruler",
         skills: [
             ["C#", "ASP.NET", "WPF", "XAML", "WinForms", "Xamarin"],
             ["MS SQL", "PostgreSQL", "SQLite", "MongoDB", "LiteDB"],
@@ -38,31 +36,25 @@ var dataObj = {
         ],
 
         educationTitle: "EDUCATION",
-        educationIcon: "mdi-school",
-        educationText: "Hi! Hi! Hi! Hi! <br>Hi! Hi! Hi! Hi! <br>Hi! Hi! Hi! Hi! <br>Hi! Hi! Hi! Hi!",
+        educationText: "<i>НУК имени адмирала Макарова</i><br><b>Cпециальность:</b> Инжененрия програмного обеспечения.<br><b>Степень:</b> магистр.",
 
 
         languagesTitle: "LANGUAGES",
-        languagesIcon: "mdi-translate",
         languagesList: [
             {
-                lang: "RU",
-                percent: 1,
-                level: "Native"
+                lang: "Russian",
+                text: "Native language."
             },
             {
-                lang: "UA",
-                percent: 1,
-                level: "Native"
+                lang: "Ukrainian",
+                text: "Native language."
             },
             {
-                lang: "EN",
-                percent: 0.7,
-                level: "B1"
+                lang: "English",
+                text: "Level B1."
             }
         ],
 
-        contactsIcon: "mdi-contacts",
         contactsTitle: "CONTACTS",
         contactsList: [
             { icon: "mdi-phone-in-talk", text: "+375257067452", url: "tel:+375257067452" },
@@ -71,7 +63,6 @@ var dataObj = {
         ],
 
         workExpTitle: "WORK EXPERIENCE",
-        workExpIcon: "mdi-briefcase",
         workExpTimelineList: [
             {
                 companyName: "FOZZY Group (Silpo)",

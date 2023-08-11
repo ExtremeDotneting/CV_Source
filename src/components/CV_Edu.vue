@@ -1,5 +1,5 @@
 <template>
-    <MyCardTitle :title="educationTitle" :icon="educationIcon"></MyCardTitle>
+    <MyCardTitle :title="educationTitle" icon="mdi-school"></MyCardTitle>
     <v-card-text v-html="educationText">
     </v-card-text>
 </template>

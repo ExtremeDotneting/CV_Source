@@ -1,6 +1,6 @@
 <template>
 
-    <MyCardTitle :title="contactsTitle" :icon="contactsIcon" class="mt-2 mb-n1"> </MyCardTitle>
+    <MyCardTitle :title="contactsTitle" icon="mdi-contacts" class="mt-2 mb-n1"> </MyCardTitle>
     <v-card-text>
         <v-list density="compact">
             <v-list-item v-for="(cont, i) in contactsList" :key="i" class="ml-n1 mb-n1">

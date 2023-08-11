@@ -1,15 +1,15 @@
 
 
 let myColors = {
-    primary: "#000000",
-    secondary: "#000000",
-    accent: "#000000",
-    error: "#000000",
-    background: "#000000",
+    // primary: "#000000",
+    // secondary: "#000000",
+    // accent: "#000000",
+    // error: "#000000",
+    // background: "#000000",
 
     //My colors
     //-------------------------
-    cardsIconColor: "#e4ecfa",
+    cardsIconColor: "#f1f1f1",
     cardsCircleColor: "#395a9d",
     cardsTitleColor: "#595667",
 

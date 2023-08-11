@@ -1,22 +1,16 @@
 <template>
-    <MyCardTitle :title="languagesTitle" :icon="languagesIcon" class="mt-2"> </MyCardTitle>
+    <MyCardTitle :title="languagesTitle" icon="mdi-translate" class="mt-2"> </MyCardTitle>
     <v-card-text>
-        <v-list-item v-for="item in languagesList" class="ml-n1">
-            <template v-slot:prepend>
-                <div class="mr-3">
-                    <span class="text-h6 text-langNameColor"> {{ item.lang }} </span>
-                </div>
-            </template>
-            <v-progress-linear :model-value="item.percent * 100" color="languageKnowledgeLevel" height="10"
-                rounded></v-progress-linear>
-            <template v-slot:append>
-                <div class="ml-2">
-                    <span class="d-flex justify-end"> {{ item.level }} </span>
-                </div>
-            </template>
+        <v-list-item v-for="item in languagesList" class="ml-n1 mb-n1" size="small">
+            <!-- <span>{{ item.lang }} - </span><span>{{ item.text }}</span> -->
+            <h3 class="headline  text-workTimelineTitleColor" style="display:inline">
+                {{ item.lang }} -
+            </h3>
+            <h4 class="headline font-weight-light font-italic" style="display:inline">
+                {{ item.text }}
+            </h4>
         </v-list-item>
     </v-card-text>
-
 </template>
 
 
