@@ -23,10 +23,5 @@ export default {
     },
     data() {
         return DataCV;
-    },
-
-    mounted() {
-        // var lines = document.querySelectorAll("div.v-timeline-divider > div.v-timeline-divider__before");
-        // lines[0].style.display = "none";
     }
 }

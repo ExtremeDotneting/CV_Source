@@ -8,7 +8,7 @@
                     <h2 :class="`mt-n1 headline  text-workTimelineTitleColor mb-3`">
                         {{ workItem.companyName }}
                         <img v-for="companyLogo in workItem.companyLogos"
-                            :src="`/images/companiesLogos/${companyLogo.fileName}`" :height="companyLogo.height"
+                            :src="`./images/companiesLogos/${companyLogo.fileName}`" :height="companyLogo.height"
                             :width="companyLogo.width" class="mb-n3 ml-1">
                     </h2>
                     <h3 :class="`mt-n1 headline font-weight-light `">

@@ -6,7 +6,7 @@
             <v-list-item v-for="(cont, i) in contactsList" :key="i" class="ml-n1 mb-n1">
                 <template v-slot:prepend>
                     <v-icon v-if="cont.icon" :icon="cont.icon" class="mr-2"></v-icon>
-                    <img v-if="cont.image" :src="cont.image" class="mr-2" width="20">
+                    <img v-if="cont.image" :src="`./images/icons/${cont.image}`" class="mr-2" width="20">
                 </template>
                 <v-list-item-title>
                     <a :href="cont.url">{{ cont.text }}</a>

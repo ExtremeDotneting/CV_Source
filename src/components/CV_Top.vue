@@ -39,6 +39,7 @@
 import MyCardTitle from "./MyCardTitle.vue";
 import DataCV from "@/core/DataCV";
 import helpers from "@/core/helpers";
+import router from "@/router";
 
 export default {
     components: {
@@ -47,18 +48,22 @@ export default {
     data() {
         return DataCV;
     },
+    props: {
+        hideTopButtons: Boolean
+    },
     methods: {
         getCurrentTranslate() {
             return this["currentTranslate"];
         },
         changeTranslation(lang) {
-            helpers.redirectWithUrlParams("/", { "lang": lang });
+            let pr = helpers.getAllUrlParameters()
+            pr["lang"] = lang;
+            helpers.redirectWithUrlParams("/", pr);
         },
         downloadPDF() {
-            helpers.redirectWithUrlParams(
-                "/pdf/",
-                helpers.getAllUrlParameters()
-            );
+            let pr = helpers.getAllUrlParameters()
+            pr["page"] = "pdf";
+            helpers.redirectWithUrlParams("/", pr);
         }
     }
 }

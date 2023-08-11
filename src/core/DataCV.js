@@ -82,7 +82,7 @@ var dataObj = {
         contactsList: [
             { icon: "mdi-phone-in-talk", text: "+375257067452", url: "tel:+375257067452" },
             { icon: "mdi-email", text: "y.mysko.work@gmail.com", url: "mailto:y.mysko.work@gmail.com" },
-            { image: "/images/icons/telegram.png", text: "@extreme_dotneting", url: "https://t.me/extreme_dotneting" }
+            { image: "telegram.png", text: "@extreme_dotneting", url: "https://t.me/extreme_dotneting" }
         ],
 
         workExpTitle: "WORK EXPERIENCE",
