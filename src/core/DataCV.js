@@ -1,4 +1,27 @@
+import helpers from "./helpers";
+
 var dataObj = {
+    getCurrent() {
+        let dataObj = this;
+        let lang = helpers.tryGetUrlParameter("lang");
+        if (!lang) {
+            lang = "EN";
+        }
+        else {
+            lang = lang.toUpperCase();
+        }
+
+        let currentTranslateData = dataObj.getTranslate(lang);
+        let defaultTranslateData = dataObj.getDefaultTranslate();
+
+        for (var key of Object.keys(defaultTranslateData)) {
+            if (!currentTranslateData[key])
+                currentTranslateData[key] = defaultTranslateData[key]
+        }
+
+        //console.log(currentTranslateData)
+        return currentTranslateData;
+    },
     getDefaultTranslate() {
         return this.getTranslate("EN");
     },
@@ -108,4 +131,4 @@ var dataObj = {
     translate_UA: {}
 }
 
-export default dataObj;
+export default dataObj.getCurrent();

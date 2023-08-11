@@ -1,17 +1,22 @@
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
 
+function queryRouting(currentComponentName){
+  return (window.location.search+"").contains("page=" + currentComponentName);
+}
+
 const routes = [
   {
     path: '/',
     children: [
       {
-        path: '',
+        path: '/',
         name: 'CV',
         component: () => import('@/views/CV.vue'),
-      },      
+      },
       {
-        path: '/pdf',
+        path: '/',
+        query: { page: 2 },
         name: 'CV_AsPdf',
         component: () => import('@/views/CV_AsPdf.vue'),
       },

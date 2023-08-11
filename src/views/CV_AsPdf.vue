@@ -3,19 +3,19 @@
         <v-row no-gutters id="toPrintPdf">
             <v-col>
 
-                <CV_Top :thisModel="this" :hideTopButtons="true"></CV_Top>
+                <CV_Top :hideTopButtons="true"></CV_Top>
 
-                <CV_Skill :thisModel="this"></CV_Skill>
+                <CV_Skill></CV_Skill>
 
-                <CV_WorkExp :thisModel="this"></CV_WorkExp>
+                <CV_WorkExp></CV_WorkExp>
 
-                <CV_Lang :thisModel="this"></CV_Lang>
-                
-                <CV_Contacts :thisModel="this"></CV_Contacts>
+                <CV_Lang></CV_Lang>
 
-                <CV_Edu :thisModel="this"></CV_Edu>
+                <CV_Contacts></CV_Contacts>
 
-                <CV_AboutMe :thisModel="this"></CV_AboutMe>
+                <CV_Edu></CV_Edu>
+
+                <CV_AboutMe></CV_AboutMe>
 
             </v-col>
         </v-row>

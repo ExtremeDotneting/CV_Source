@@ -7,18 +7,14 @@
 
 <script>
 import MyCardTitle from "./MyCardTitle.vue";
+import DataCV from "@/core/DataCV";
 
 export default {
     components: {
         MyCardTitle
     },
     data() {
-        return this.thisModel;
-    },
-    props: ['thisModel'],
-    created() {
-        // props are exposed on `this`
-        console.log(this.thisModel)
+        return DataCV;
     }
 }
 </script>
