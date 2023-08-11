@@ -1,7 +1,5 @@
 import MyCardTitle from '../components/MyCardTitle.vue';
-import dataObj from '@/core/DataCV';
-import helpers from '../core/helpers';
-import { jsPDF } from "jspdf";
+import helpers from '../core/helpers'
 import CV_Top from "../components/CV_Top.vue"
 import CV_WorkExp from '../components/CV_WorkExp.vue';
 import CV_Edu from '../components/CV_Edu.vue';
@@ -24,7 +22,7 @@ export default {
         CV_Contacts
     },
     data() {
-        return dataObj;
+        return DataCV;
     },
 
     mounted() {

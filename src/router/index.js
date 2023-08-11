@@ -10,13 +10,12 @@ const routes = [
     path: '/',
     children: [
       {
-        path: '/',
+        path: '',
         name: 'CV',
         component: () => import('@/views/CV.vue'),
       },
       {
-        path: '/',
-        query: { page: 2 },
+        path: 'pdf',
         name: 'CV_AsPdf',
         component: () => import('@/views/CV_AsPdf.vue'),
       },
