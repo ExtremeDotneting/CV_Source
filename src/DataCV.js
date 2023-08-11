@@ -5,10 +5,10 @@ var dataObj = {
     getTranslate(lang) {
         let dataObj = this;
         var currentTranslateData = dataObj["translate_" + lang];
-        currentTranslateData["currentTranslate"] = dataObj
+        currentTranslateData.currentTranslate = dataObj
             .translates
             .filter(r => r.shortName == lang)[0];
-        currentTranslateData["otherTranslates"] = dataObj
+        currentTranslateData.otherTranslates = dataObj
             .translates
             .filter(r => r.shortName != lang);
         return currentTranslateData;
@@ -32,17 +32,14 @@ var dataObj = {
         skillsIcon: "mdi-pencil-ruler",
         skills: [
             ["C#", "ASP.NET", "WPF", "XAML", "WinForms", "Xamarin"],
-            ["Vue.js", "Typescript"],
-            ["MS SQL", "PostgreSQL", "SQLite"],
-            ["MongoDB", "LiteDB"],
+            ["MS SQL", "PostgreSQL", "SQLite", "MongoDB", "LiteDB"],
             ["SOLID", "GoF patterns", "MVC", "MVVM"],
-            ["nUnit", "PuppeteerSharp", "Chromium"],
-            ["Unity"]
+            ["Vue.js", "Typescript", "Unity", "nUnit", "PuppeteerSharp", "Chromium"]
         ],
 
         educationTitle: "EDUCATION",
         educationIcon: "mdi-school",
-        educationText:"Hi! Hi! Hi! Hi! <br>Hi! Hi! Hi! Hi! <br>Hi! Hi! Hi! Hi! <br>Hi! Hi! Hi! Hi!",
+        educationText: "Hi! Hi! Hi! Hi! <br>Hi! Hi! Hi! Hi! <br>Hi! Hi! Hi! Hi! <br>Hi! Hi! Hi! Hi!",
 
 
         languagesTitle: "LANGUAGES",
@@ -69,7 +66,7 @@ var dataObj = {
         contactsTitle: "CONTACTS",
         contactsList: [
             { icon: "mdi-phone-in-talk", text: "+375257067452", url: "tel:+375257067452" },
-            { icon: "mdi-email", text: "y.mysko.work@gmail.com", url: "" },
+            { icon: "mdi-email", text: "y.mysko.work@gmail.com", url: "mailto:y.mysko.work@gmail.com" },
             { image: "/images/icons/telegram.png", text: "@extreme_dotneting", url: "https://t.me/extreme_dotneting" }
         ],
 
@@ -90,7 +87,7 @@ var dataObj = {
                 companyName: "R&D Team",
                 position: "Senior C# Developer",
                 companyLogos: [
-                    { fileName: "RnD_Team.png", width: 90, height: 40 }
+                    { fileName: "RnD_Team.png", width: 120, height: 40 }
                 ],
                 dateOfWork: "Август 2019 – Октябрь 2021",
                 text: " • Трейдинг-бот для <a href=\"https://www.binance.com/\">Binance</a>;<br> • Трейдинг-бот для биржи опционов <a href=\"https://www.deribit.com/\">Deribit</a>;<br> • ASP.NET сервисы;<br> • Работа с WebView и Chromium для автоматизации действий на веб-сайтах;<br> • Разработка обменника криптовалют."

@@ -15,7 +15,7 @@ class Helpers {
             url = url + "&";
         }
         else {
-            url = "?";
+            url = url+"?";
         }
 
         var paramsWasAdded = false;
@@ -63,6 +63,11 @@ class Helpers {
             urlParams[decode(match[1])] = decode(match[2]);
         return urlParams;
     }
+
+    delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
 }
 
 let helpers = new Helpers();
