@@ -1,4 +1,4 @@
-import { i as includes, j as isOn, k as eventName, a as propsFactory, g as genericComponent, l as capitalize, n as camelize, q as h$1, s as getCurrentInstance, t as ref, u as IN_BROWSER, v as onBeforeUnmount, x as watch, y as refElement, z as readonly, A as getCurrentInstanceName, d as computed, B as isRef, C as destructComputed, D as isCssColor, E as unref, c as createVNode, F as Fragment, m as makeThemeProps, b as provideTheme, p as provideDefaults, G as toRef, H as getUid, J as provide, K as inject, L as reactive, M as useProxiedModel, N as onMounted, O as deepEqual, P as wrapInArray, Q as findChildrenWithProvide, R as mergeProps, S as toRefs, T as convertToUnit, I as IconValue, U as useIcon, V as flattenFragments, W as Text, X as shallowRef, Y as SUPPORTS_INTERSECTION, Z as watchEffect, _ as useRtl, $ as Transition, a0 as resolveDynamicComponent, a1 as hasEvent, a2 as nextTick, a3 as onScopeDispose, a4 as isObject, a5 as keyCodes, w as withDirectives, r as resolveDirective, a6 as onBeforeMount, a7 as vShow, o as openBlock, a8 as createBlock, h as withCtx, a9 as createCommentVNode, aa as createTextVNode, ab as toDisplayString, ac as __vitePreload, ad as TransitionGroup, ae as toRaw, af as defineComponent, ag as EventProp, ah as deprecate, ai as focusChild, aj as getPropertyFromItem, ak as pick, al as useToggleScope, am as clamp, an as effectScope, ao as matchesSelector, ap as useDisplay, aq as Teleport, ar as omit, as as focusableChildren, at as getNextElement, f as createElementBlock, au as createBaseVNode, av as renderList, e as resolveComponent, aw as normalizeClass, ax as useLocale, ay as breakpoints } from "./index-437b209d.js";
+import { i as includes, j as isOn, k as eventName, a as propsFactory, g as genericComponent, l as capitalize, n as camelize, q as h$1, s as getCurrentInstance, t as ref, u as IN_BROWSER, v as onBeforeUnmount, x as watch, y as refElement, z as readonly, A as getCurrentInstanceName, d as computed, B as isRef, C as destructComputed, D as isCssColor, E as unref, c as createVNode, F as Fragment, m as makeThemeProps, b as provideTheme, p as provideDefaults, G as toRef, H as getUid, J as provide, K as inject, L as reactive, M as useProxiedModel, N as onMounted, O as deepEqual, P as wrapInArray, Q as findChildrenWithProvide, R as mergeProps, S as toRefs, T as convertToUnit, I as IconValue, U as useIcon, V as flattenFragments, W as Text, X as shallowRef, Y as SUPPORTS_INTERSECTION, Z as watchEffect, _ as useRtl, $ as Transition, a0 as resolveDynamicComponent, a1 as hasEvent, a2 as nextTick, a3 as onScopeDispose, a4 as isObject, a5 as keyCodes, w as withDirectives, r as resolveDirective, a6 as onBeforeMount, a7 as vShow, o as openBlock, a8 as createBlock, h as withCtx, a9 as createCommentVNode, aa as createTextVNode, ab as toDisplayString, ac as __vitePreload, ad as TransitionGroup, ae as toRaw, af as defineComponent, ag as EventProp, ah as deprecate, ai as focusChild, aj as getPropertyFromItem, ak as pick, al as useToggleScope, am as clamp, an as effectScope, ao as matchesSelector, ap as useDisplay, aq as Teleport, ar as omit, as as focusableChildren, at as getNextElement, f as createElementBlock, au as createBaseVNode, av as renderList, e as resolveComponent, aw as normalizeClass, ax as useLocale, ay as breakpoints } from "./index-103bfe7a.js";
 const block = ["top", "bottom"];
 const inline = ["start", "end", "left", "right"];
 function parseAnchor(anchor, isRtl) {
@@ -10700,7 +10700,7 @@ function(t2) {
  */
 function(t2) {
   function e() {
-    return (n.canvg ? Promise.resolve(n.canvg) : __vitePreload(() => import("./index.es-ae07d012.js"), true ? ["assets/index.es-ae07d012.js","assets/_commonjsHelpers-7a77ea84.js","assets/index-437b209d.js","assets/index-9cf5d468.css"] : void 0)).catch(function(t3) {
+    return (n.canvg ? Promise.resolve(n.canvg) : __vitePreload(() => import("./index.es-9c525a86.js"), true ? ["assets/index.es-9c525a86.js","assets/_commonjsHelpers-7a77ea84.js","assets/index-103bfe7a.js","assets/index-9cf5d468.css"] : void 0)).catch(function(t3) {
       return Promise.reject(new Error("Could not load canvg: " + t3));
     }).then(function(t3) {
       return t3.default ? t3.default : t3;
@@ -14636,6 +14636,20 @@ const _sfc_main$6 = {
   },
   data() {
     return dataObj$1;
+  },
+  methods: {
+    getCurrentTranslate() {
+      return this["currentTranslate"];
+    },
+    changeTranslation(lang) {
+      helpers.redirectWithUrlParams("/", { "lang": lang });
+    },
+    downloadPDF() {
+      helpers.redirectWithUrlParams(
+        "/pdf/",
+        helpers.getAllUrlParameters()
+      );
+    }
   }
 };
 const _hoisted_1$4 = {
@@ -14649,15 +14663,16 @@ const _hoisted_2$3 = /* @__PURE__ */ createBaseVNode("img", {
   id: "downloadPdfIcon"
 }, null, -1);
 const _hoisted_3$1 = ["src"];
-const _hoisted_4$1 = {
+const _hoisted_4$1 = ["src"];
+const _hoisted_5$1 = {
   class: "text-h4",
   style: { "margin-left": "140px", "margin-top": "30px" }
 };
-const _hoisted_5$1 = {
+const _hoisted_6 = {
   class: "text-h6 font-italic",
   style: { "margin-left": "140px" }
 };
-const _hoisted_6 = /* @__PURE__ */ createBaseVNode("img", {
+const _hoisted_7 = /* @__PURE__ */ createBaseVNode("img", {
   src: _imports_2,
   width: "120",
   height: "120",
@@ -14683,7 +14698,7 @@ function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
                 class: "elevation-0",
                 color: "cardsCircleColor",
                 height: "40",
-                onClick: _cache[0] || (_cache[0] = ($event) => _ctx.downloadPDF())
+                onClick: _cache[0] || (_cache[0] = ($event) => $options.downloadPDF())
               }, {
                 default: withCtx(() => [
                   _hoisted_2$3
@@ -14696,7 +14711,17 @@ function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
                     createVNode(VBtn, mergeProps(props, {
                       class: "elevation-0",
                       color: "cardsCircleColor"
-                    }), null, 16)
+                    }), {
+                      default: withCtx(() => [
+                        createBaseVNode("img", {
+                          src: `https://flagcdn.com/w40/${$options.getCurrentTranslate().flagName}.png`,
+                          width: "26",
+                          height: "18"
+                        }, null, 8, _hoisted_3$1),
+                        createTextVNode(" ▾ ")
+                      ]),
+                      _: 2
+                    }, 1040)
                   ]),
                   default: withCtx(() => [
                     createVNode(VList, null, {
@@ -14704,7 +14729,7 @@ function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
                         (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.otherTranslates, (item, index) => {
                           return openBlock(), createBlock(VListItem, {
                             key: index,
-                            onClick: ($event) => _ctx.changeTranslation(item.shortName)
+                            onClick: ($event) => $options.changeTranslation(item.shortName)
                           }, {
                             default: withCtx(() => [
                               createVNode(VListItemTitle, { align: "center" }, {
@@ -14713,7 +14738,7 @@ function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
                                     src: `https://flagcdn.com/w40/${item.flagName}.png`,
                                     width: "26",
                                     height: "18"
-                                  }, null, 8, _hoisted_3$1)
+                                  }, null, 8, _hoisted_4$1)
                                 ]),
                                 _: 2
                               }, 1024)
@@ -14729,15 +14754,15 @@ function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
                 })
               ])
             ])) : createCommentVNode("", true),
-            createBaseVNode("div", _hoisted_4$1, toDisplayString(_ctx.myName), 1),
-            createBaseVNode("div", _hoisted_5$1, toDisplayString(_ctx.workPosition), 1)
+            createBaseVNode("div", _hoisted_5$1, toDisplayString(_ctx.myName), 1),
+            createBaseVNode("div", _hoisted_6, toDisplayString(_ctx.workPosition), 1)
           ]),
           _: 1
         })
       ]),
       _: 1
     }),
-    _hoisted_6
+    _hoisted_7
   ], 64);
 }
 const CV_Top = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$6]]);
@@ -15563,17 +15588,6 @@ const CV = {
     return dataObj$1;
   },
   mounted() {
-  },
-  methods: {
-    changeTranslation(lang) {
-      helpers.redirectWithUrlParams("/", { "lang": lang });
-    },
-    downloadPDF() {
-      helpers.redirectWithUrlParams(
-        "/pdf/",
-        helpers.getAllUrlParameters()
-      );
-    }
   }
 };
 const VGrid = "";

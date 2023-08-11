@@ -1,6 +1,6 @@
-import { _ as _export_sfc, D as CV, E as VRow, G as helpers, F as VCol } from "./VRow-b69b0156.js";
-import { e as resolveComponent, o as openBlock, f as createElementBlock, c as createVNode, h as withCtx } from "./index-437b209d.js";
-const CV_AsPdf_vue_vue_type_style_index_0_scoped_8e577743_lang = "";
+import { _ as _export_sfc, D as CV, E as VRow, G as helpers, F as VCol } from "./VRow-ba59ef20.js";
+import { e as resolveComponent, o as openBlock, f as createElementBlock, c as createVNode, h as withCtx } from "./index-103bfe7a.js";
+const CV_AsPdf_vue_vue_type_style_index_0_scoped_185c6cb0_lang = "";
 async function waitAndPrint() {
   await helpers.delay(2e3);
   window.print();
@@ -28,16 +28,13 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       default: withCtx(() => [
         createVNode(VCol, null, {
           default: withCtx(() => [
-            createVNode(_component_CV_Top, {
-              thisModel: this,
-              hideTopButtons: true
-            }),
-            createVNode(_component_CV_Skill, { thisModel: this }),
-            createVNode(_component_CV_WorkExp, { thisModel: this }),
-            createVNode(_component_CV_Lang, { thisModel: this }),
-            createVNode(_component_CV_Contacts, { thisModel: this }),
-            createVNode(_component_CV_Edu, { thisModel: this }),
-            createVNode(_component_CV_AboutMe, { thisModel: this })
+            createVNode(_component_CV_Top, { hideTopButtons: true }),
+            createVNode(_component_CV_Skill),
+            createVNode(_component_CV_WorkExp),
+            createVNode(_component_CV_Lang),
+            createVNode(_component_CV_Contacts),
+            createVNode(_component_CV_Edu),
+            createVNode(_component_CV_AboutMe)
           ]),
           _: 1
         })
@@ -46,7 +43,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   ]);
 }
-const CV_AsPdf = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-8e577743"]]);
+const CV_AsPdf = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-185c6cb0"]]);
 export {
   CV_AsPdf as default
 };

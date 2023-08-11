@@ -10555,14 +10555,15 @@ const routes = [
     path: "/",
     children: [
       {
-        path: "",
+        path: "/",
         name: "CV",
-        component: () => __vitePreload(() => import("./CV-1b1303bc.js"), true ? ["assets/CV-1b1303bc.js","assets/VRow-b69b0156.js","assets/VRow-7f1a76ac.css","assets/CV-3976f711.css"] : void 0)
+        component: () => __vitePreload(() => import("./CV-a996e1c4.js"), true ? ["assets/CV-a996e1c4.js","assets/VRow-ba59ef20.js","assets/VRow-7f1a76ac.css","assets/CV-3976f711.css"] : void 0)
       },
       {
-        path: "/pdf",
+        path: "/",
+        query: { page: 2 },
         name: "CV_AsPdf",
-        component: () => __vitePreload(() => import("./CV_AsPdf-bde99092.js"), true ? ["assets/CV_AsPdf-bde99092.js","assets/VRow-b69b0156.js","assets/VRow-7f1a76ac.css","assets/CV_AsPdf-ab6fd726.css"] : void 0)
+        component: () => __vitePreload(() => import("./CV_AsPdf-b5fcb784.js"), true ? ["assets/CV_AsPdf-b5fcb784.js","assets/VRow-ba59ef20.js","assets/VRow-7f1a76ac.css","assets/CV_AsPdf-ff00afec.css"] : void 0)
       }
     ]
   }
