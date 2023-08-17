@@ -3,7 +3,9 @@
         <v-row no-gutters id="toPrintPdf">
             <v-col>
 
-                <CV_Top :hideTopButtons="true"></CV_Top>
+                <CV_Top :hideTopButtons="true"></CV_Top>                
+
+                <CV_AboutMe></CV_AboutMe>
 
                 <CV_Skill></CV_Skill>
 
@@ -14,8 +16,6 @@
                 <CV_Contacts></CV_Contacts>
 
                 <CV_Edu></CV_Edu>
-
-                <CV_AboutMe></CV_AboutMe>
 
             </v-col>
         </v-row>
