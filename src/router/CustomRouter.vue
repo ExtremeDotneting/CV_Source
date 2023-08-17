@@ -24,7 +24,11 @@ export default {
             var str = window.location.search + "";
             str = str.toLowerCase();
             let keyword = "page=" + pageName;
-            return str.includes(keyword);
+            let res = str.includes(keyword);
+            if (res) {
+                this.isMatchedOnce = true;
+            }
+            return res;
         }
     }
 }

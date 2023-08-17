@@ -58,6 +58,11 @@ export default {
     },
     data() {
         return DataCV;
+    },
+    mounted() {
+        var el = document.querySelector(".v-timeline-divider__before");
+        if (el)
+            el.style.display = "none";
     }
 }
 </script>

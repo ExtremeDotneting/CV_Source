@@ -50,6 +50,10 @@ export default {
         return DataCV;
     },
     mounted() {
+        var el = document.querySelector(".v-timeline-divider__before");
+        if (el)
+            el.style.display = "none";
+
         async function waitAndPrint() {
             await helpers.delay(2000)
             window.print();
