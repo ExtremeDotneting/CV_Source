@@ -2,6 +2,7 @@ import helpers from "./helpers";
 
 var dataObj = {
     getCurrent() {
+        //------------------------------
         let dataObj = this;
         let lang = helpers.tryGetUrlParameter("lang");
         if (!lang) {
@@ -14,12 +15,12 @@ var dataObj = {
         let currentTranslateData = dataObj.getTranslate(lang);
         let defaultTranslateData = dataObj.getDefaultTranslate();
 
+        //------------------------------
         for (var key of Object.keys(defaultTranslateData)) {
             if (!currentTranslateData[key])
                 currentTranslateData[key] = defaultTranslateData[key]
         }
 
-        //console.log(currentTranslateData)
         return currentTranslateData;
     },
     getDefaultTranslate() {
@@ -27,13 +28,19 @@ var dataObj = {
     },
     getTranslate(lang) {
         let dataObj = this;
+        
+        //------------------------------
         var currentTranslateData = dataObj["translate_" + lang];
         currentTranslateData.currentTranslate = dataObj
             .translates
             .filter(r => r.shortName == lang)[0];
+
+        //------------------------------
+        let availableLangs = helpers.tryGetUrlParameter("al");
+        let availableLangsArr = (availableLangs ? availableLangs : "") .split(",");
         currentTranslateData.otherTranslates = dataObj
             .translates
-            .filter(r => r.shortName != lang);
+            .filter(r => r.shortName != lang && availableLangsArr.includes(r.shortName));
         return currentTranslateData;
     },
 
@@ -44,6 +51,7 @@ var dataObj = {
     ],
 
     translate_EN: {
+        externalUrl: "https://extremedotneting.github.io/?lang=RU",
         myName: "YURII MYSKO",
         workPosition: "C# Developer",
 
@@ -234,7 +242,7 @@ var dataObj = {
             }
         ],
 
-        contactsTitle: "КОНТАКТЫ",
+        contactsTitle: "КОНТАКТИ",
 
         workExpTitle: "ДОСВІД РОБОТИ",
         workExpTimelineList: [
@@ -255,7 +263,7 @@ var dataObj = {
                     { fileName: "RnD_Team.png", width: 120, height: 40 }
                 ],
                 dateOfWork: "Серпень 2019 – Жовтень 2021",
-                text: " • Трейдінг-бот для <a href=\"https://www.binance.com/\">Binance</a>;<br> • Трейдінг-бот для біржи криптовалютних деривативів <a href=\"https://www.deribit.com/\">Deribit</a>;<br> • ASP.NET сервисы;<br> • Робота с WebView та Chromium для автоматизації дій на веб-сайтах;<br> • Розробка обмінника криптовалют."
+                text: " • Трейдінг-бот для <a href=\"https://www.binance.com/\">Binance</a>;<br> • Трейдінг-бот для біржи криптовалютних деривативів <a href=\"https://www.deribit.com/\">Deribit</a>;<br> • ASP.NET сервіси;<br> • Робота с WebView та Chromium для автоматизації дій на веб-сайтах;<br> • Розробка обмінника криптовалют."
             },
             {
                 companyName: "Фріланс",

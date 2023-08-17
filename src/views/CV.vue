@@ -3,7 +3,7 @@
         <v-row no-gutters class="mr-1 ml-n1" id="toPrintPdf">
             <v-col sm="12" md="12">
                 <v-card class="elevation-11 ml-2 mt-0">
-                    <CV_Top :hideTopButtons="false"></CV_Top>
+                    <CV_Top :isPdfVersion="false"></CV_Top>
                 </v-card>
             </v-col>
 
@@ -63,6 +63,7 @@ export default {
         var el = document.querySelector(".v-timeline-divider__before");
         if (el)
             el.style.display = "none";
+        document.title = "CV " + this.myName;
     }
 }
 </script>

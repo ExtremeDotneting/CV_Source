@@ -3,7 +3,7 @@
         <v-row no-gutters id="toPrintPdf">
             <v-col>
 
-                <CV_Top :hideTopButtons="true"></CV_Top>                
+                <CV_Top :isPdfVersion="true"></CV_Top>
 
                 <CV_AboutMe></CV_AboutMe>
 
@@ -53,6 +53,7 @@ export default {
         var el = document.querySelector(".v-timeline-divider__before");
         if (el)
             el.style.display = "none";
+        document.title = this.myName + " - " + this.currentTranslate.title + " CV";
 
         async function waitAndPrint() {
             await helpers.delay(2000)

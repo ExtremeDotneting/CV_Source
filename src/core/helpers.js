@@ -15,7 +15,7 @@ class Helpers {
             url = url + "&";
         }
         else {
-            url = url+"?";
+            url = url + "?";
         }
 
         var paramsWasAdded = false;
@@ -62,6 +62,22 @@ class Helpers {
         while (match = search.exec(query))
             urlParams[decode(match[1])] = decode(match[2]);
         return urlParams;
+    }
+
+    async checkIfFileExsists(filePath) {
+
+        let xhr = new XMLHttpRequest();
+        let promiseToWait = new Promise(function (resolve, reject) {
+            xhr.onload = function () { resolve(); }
+            xhr.onerror = function () { resolve(); }
+        })
+
+        xhr.open('GET', filePath, true);
+        xhr.send();
+        await promiseToWait;
+
+        var isExists = xhr.status >= 200 && xhr.status < 300;
+        return isExists;
     }
 
     delay(ms) {

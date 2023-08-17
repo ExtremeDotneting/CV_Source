@@ -1,11 +1,12 @@
 <template>
     <v-img height="130" src="/images/titleBackground.png" cover style="z-index: -10;" class="mb-n2">
         <v-card-title class="text-white " style="z-index:1000;">
-            <div class="float-right mt-4 mr-n7 mr-sm-0" align="right" v-if="!hideTopButtons">
-                <v-btn class="elevation-0" color="cardsCircleColor" height="40" @click="downloadPDF()">
+            <div class="float-right mt-4 mr-n7 mr-sm-0" align="right">
+                <v-btn v-if="!isPdfVersion" class="elevation-0" color="cardsCircleColor" height="40" @click="downloadPDF()">
                     <img src="/images/icons/downloadPDF.png" height="40" id="downloadPdfIcon">
+
                 </v-btn>
-                <div>
+                <div v-if="!isPdfVersion">
                     <v-menu open-on-hover>
                         <template v-slot:activator="{ props }">
                             <v-btn v-bind="props" class="elevation-0" color="cardsCircleColor">
@@ -33,6 +34,12 @@
 
     <img id="portraitImg" src="/images/portraits/portrait.jpg" width="120" height="120"
         class="ml-sm-8 ml-5 rounded-sm elevation-9">
+
+    <a :href="externalUrl" id="externalUrlElement" class="float-right " align="right">
+        <v-btn v-if="isPdfVersion" variant="outlined" size="x-small">
+            Open web version <v-icon icon="mdi-open-in-new"></v-icon>
+        </v-btn>
+    </a>
 </template>
 
 <script>
@@ -48,7 +55,7 @@ export default {
         return DataCV;
     },
     props: {
-        hideTopButtons: Boolean
+        isPdfVersion: Boolean
     },
     methods: {
         getCurrentTranslate() {
@@ -59,10 +66,16 @@ export default {
             pr["lang"] = lang;
             helpers.redirectWithUrlParams("/", pr);
         },
-        downloadPDF() {
-            let pr = helpers.getAllUrlParameters()
-            pr["page"] = "pdf";
-            helpers.redirectWithUrlParams("/", pr);
+        async downloadPDF() {
+            let pdfFileName = "./pdfVersions/" + this.myName + " - " + this.currentTranslate.title + " CV.pdf";
+            var isFileExists = await helpers.checkIfFileExsists(pdfFileName);
+            if (isFileExists) {
+                window.location.href = pdfFileName;
+            } else {
+                let pr = helpers.getAllUrlParameters()
+                pr["page"] = "pdf";
+                helpers.redirectWithUrlParams("/", pr);
+            }
         }
     }
 }
@@ -77,5 +90,11 @@ export default {
     margin-top: -100px;
 
     /*border: 1px solid; border-color: black;  border-style: double;*/
+}
+
+#externalUrlElement {
+    color: #ffffff;
+    margin-top: -100px;
+    margin-right: 10px;
 }
 </style>
