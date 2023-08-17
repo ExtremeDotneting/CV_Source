@@ -41,6 +41,11 @@ var dataObj = {
         currentTranslateData.otherTranslates = dataObj
             .translates
             .filter(r => r.shortName != lang && availableLangsArr.includes(r.shortName));
+
+        //Crunch <<<
+        currentTranslateData.externalUrl = "https://extremedotneting.github.io/?lang=" + lang + "&al=" +availableLangs;
+        //console.log(currentTranslateData.externalUrl)
+        //>>>
         return currentTranslateData;
     },
 
@@ -51,7 +56,6 @@ var dataObj = {
     ],
 
     translate_EN: {
-        externalUrl: "https://extremedotneting.github.io/?lang=RU",
         myName: "YURII MYSKO",
         workPosition: "C# Developer",
 
