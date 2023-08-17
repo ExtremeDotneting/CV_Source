@@ -28,7 +28,7 @@ var dataObj = {
     },
     getTranslate(lang) {
         let dataObj = this;
-        
+
         //------------------------------
         var currentTranslateData = dataObj["translate_" + lang];
         currentTranslateData.currentTranslate = dataObj
@@ -37,7 +37,7 @@ var dataObj = {
 
         //------------------------------
         let availableLangs = helpers.tryGetUrlParameter("al");
-        let availableLangsArr = (availableLangs ? availableLangs : "") .split(",");
+        let availableLangsArr = (availableLangs ? availableLangs : "").split(",");
         currentTranslateData.otherTranslates = dataObj
             .translates
             .filter(r => r.shortName != lang && availableLangsArr.includes(r.shortName));
@@ -89,7 +89,9 @@ var dataObj = {
         contactsTitle: "CONTACTS",
         contactsList: [
             { icon: "mdi-email", text: "y.mysko.work@gmail.com", url: "mailto:y.mysko.work@gmail.com" },
-            { image: "telegram.png", text: "@extreme_dotneting", url: "https://t.me/extreme_dotneting" }
+            { image: "telegram.png", text: "@extreme_dotneting", url: "https://t.me/extreme_dotneting" },
+            { image: "github.png", text: "Open-source projects", url: "https://github.com/ExtremeDotneting?tab=repositories" },
+            { image: "youtube.png", text: "Projects videos", url: "https://www.youtube.com/@user-wn3ph5nh6u/videos" }
         ],
 
         workExpTitle: "WORK EXPERIENCE",
