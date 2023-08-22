@@ -9,7 +9,7 @@
                     <img v-if="cont.image" :src="`./images/icons/${cont.image}`" class="mr-2" width="20">
                 </template>
                 <v-list-item-title>
-                    <a :href="cont.url">{{ cont.text }}</a>
+                    <a :href="cont.url" style="color:#301ef0">{{ cont.text }}</a>
                 </v-list-item-title>
             </v-list-item>
         </v-list>

@@ -101,7 +101,7 @@ var dataObj = {
         workExpTitle: "WORK EXPERIENCE",
         workExpTimelineList: [
             {
-                companyName: "FOZZY Group (Silpo)",
+                companyName: "FOZZY Group",
                 position: "TeamLead C# Developer",
                 companyLogos: [
                     { fileName: "fozzy.png", width: 40, height: 40 },
@@ -116,7 +116,7 @@ var dataObj = {
                 companyLogos: [
                     { fileName: "RnD_Team.png", width: 120, height: 40 }
                 ],
-                dateOfWork: "August 2019 – October 2021",
+                dateOfWork: "August 2019 – October 2020",
                 text: " • Trading bot for <a href=\"https://www.binance.com/\">Binance</a>;<br> • Trading bot for cryptocurrency derivatives exchange <a href=\"https://www.deribit.com/\">Deribit</a>;<br> • ASP.NET services;<br> • Working with WebView & Chromium, automating actions on websites;<br> • Cryptocurrency exchange dev."
             },
             {
@@ -143,7 +143,7 @@ var dataObj = {
         workPosition: "C# Разработчик",
 
         aboutMeTitle: "ОБО МНЕ",
-        aboutMeText: "Программист с опытом разработки мобильных и декстопных приложений, сайтов, серверов.<br>Не боюсь технически сложных задач.<br>В каждом проекте для меня важнее всего решить бизнес-проблему.<br>Есть опыт управления командой.",
+        aboutMeText: "Программист с опытом разработки мобильных и десктопных приложений, сайтов, серверов.<br>Не боюсь технически сложных задач.<br>В каждом проекте для меня важнее всего решить бизнес-проблему.<br>Есть опыт управления командой.",
 
         skillsTitle: "НАВЫКИ",
         skills: [
@@ -160,11 +160,11 @@ var dataObj = {
         languagesList: [
             {
                 lang: "Русский",
-                text: "Родной язык."
+                text: "Свободно владею."
             },
             {
                 lang: "Украинский",
-                text: "Родной язык."
+                text: "Свободно владею."
             },
             {
                 lang: "Английский",
@@ -177,7 +177,7 @@ var dataObj = {
         workExpTitle: "ОПЫТ РАБОТЫ",
         workExpTimelineList: [
             {
-                companyName: "FOZZY Group (Silpo)",
+                companyName: "FOZZY Group",
                 position: "TeamLead C# Developer",
                 companyLogos: [
                     { fileName: "fozzy.png", width: 40, height: 40 },
@@ -192,7 +192,7 @@ var dataObj = {
                 companyLogos: [
                     { fileName: "RnD_Team.png", width: 120, height: 40 }
                 ],
-                dateOfWork: "Август 2019 – Октябрь 2021",
+                dateOfWork: "Август 2019 – Октябрь 2020",
                 text: " • Трейдинг-бот для <a href=\"https://www.binance.com/\">Binance</a>;<br> • Трейдинг-бот для биржи криптовалютных деривативов <a href=\"https://www.deribit.com/\">Deribit</a>;<br> • ASP.NET сервисы;<br> • Работа с WebView и Chromium для автоматизации действий на веб-сайтах;<br> • Разработка обменника криптовалют."
             },
             {
@@ -219,7 +219,7 @@ var dataObj = {
         workPosition: "C# Розробник",
 
         aboutMeTitle: "ПРО МЕНЕ",
-        aboutMeText: "Програміст з досвідом розробки мобільних і декстопних додатків, сайтів, серверів.<br>Не боюся технічно складних завдань.<br>У кожному проекті для мене найважливіше вирішити бізнес-проблему.<br>Є досвід управління командою.",
+        aboutMeText: "Програміст з досвідом розробки мобільних і десктопних додатків, сайтів, серверів.<br>Не боюся технічно складних завдань.<br>У кожному проекті для мене найважливіше вирішити бізнес-проблему.<br>Є досвід управління командою.",
 
         skillsTitle: "НАВИЧКИ",
         skills: [
@@ -236,11 +236,11 @@ var dataObj = {
         languagesList: [
             {
                 lang: "Українська",
-                text: "Рідна мова."
+                text: "Вільно володію."
             },
             {
                 lang: "Російська",
-                text: "Рідна мова."
+                text: "Вільно володію."
             },
             {
                 lang: "Англійська",
@@ -253,11 +253,11 @@ var dataObj = {
         workExpTitle: "ДОСВІД РОБОТИ",
         workExpTimelineList: [
             {
-                companyName: "FOZZY Group (Silpo)",
+                companyName: "FOZZY Group",
                 position: "TeamLead C# Developer",
                 companyLogos: [
-                    { fileName: "fozzy.png", width: 40, height: 40 },
-                    { fileName: "silpo.png", width: 80, height: 40 }
+                    { fileName: "fozzy.png", width: 40, height: 40 }
+                    //{ fileName: "silpo.png", width: 80, height: 40 }
                 ],
                 dateOfWork: "Березень 2021 – Травень 2023",
                 text: " • Менторство. Управління командою розробників;<br> • Інтеграція великих систем: <a href=\"https://silpo.ua/\">Silpo</a>, <a href=\"https://maudau.com.ua/\">MauDau</a>, <a href=\"https://justin.ua/\">Justin</a>,  <a href=\"https://novaposhta.ua/\">NovaPoshta</a> та інші;<br> • <a href=\"https://www.nuget.org/profiles/KogerCoder\">Open-source розробка</a>;<br> • Розробка архітектури програм, мікросервісна архітектура;<br> • Розробка серверів. Робота з хмарними сервісами Azure, Amazon."
@@ -268,7 +268,7 @@ var dataObj = {
                 companyLogos: [
                     { fileName: "RnD_Team.png", width: 120, height: 40 }
                 ],
-                dateOfWork: "Серпень 2019 – Жовтень 2021",
+                dateOfWork: "Серпень 2019 – Жовтень 2020",
                 text: " • Трейдінг-бот для <a href=\"https://www.binance.com/\">Binance</a>;<br> • Трейдінг-бот для біржи криптовалютних деривативів <a href=\"https://www.deribit.com/\">Deribit</a>;<br> • ASP.NET сервіси;<br> • Робота с WebView та Chromium для автоматизації дій на веб-сайтах;<br> • Розробка обмінника криптовалют."
             },
             {
