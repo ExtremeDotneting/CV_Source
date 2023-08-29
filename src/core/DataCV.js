@@ -43,7 +43,7 @@ var dataObj = {
             .filter(r => r.shortName != lang && availableLangsArr.includes(r.shortName));
 
         //Crunch <<<
-        currentTranslateData.externalUrl = "https://extremedotneting.github.io/?lang=" + lang + "&al=" +availableLangs;
+        currentTranslateData.externalUrl = "https://extremedotneting.github.io/?lang=" + lang + "&al=" + availableLangs;
         //console.log(currentTranslateData.externalUrl)
         //>>>
         return currentTranslateData;
@@ -56,6 +56,8 @@ var dataObj = {
     ],
 
     translate_EN: {
+        showPortrait: false,
+
         myName: "YURII MYSKO",
         workPosition: "C# Developer",
 
@@ -104,11 +106,10 @@ var dataObj = {
                 companyName: "FOZZY Group",
                 position: "TeamLead C# Developer",
                 companyLogos: [
-                    { fileName: "fozzy.png", width: 40, height: 40 },
-                    { fileName: "silpo.png", width: 80, height: 40 }
+                    { fileName: "fozzy.png", width: 40, height: 40 }
                 ],
                 dateOfWork: "March 2021 – May 2023",
-                text: " • Mentorship. Development team management;<br> • Large systems integration: <a href=\"https://silpo.ua/\">Silpo</a>, <a href=\"https://maudau.com.ua/\">MauDau</a>, <a href=\"https://justin.ua/\">Justin</a>,  <a href=\"https://novaposhta.ua/\">NovaPoshta</a> etc;<br> • <a href=\"https://www.nuget.org/profiles/KogerCoder\">Open-source development</a>;<br> • Architecture development, microservice architecture;<br> • Servers dev. Integration with clouds Azure, Amazon."
+                text: " • Mentorship. Development team management;<br> • Large systems integration: <a href=\"https://silpo.ua/\">Silpo</a>, <a href=\"https://maudau.com.ua/\">MauDau</a>, <a href=\"https://justin.ua/\">Justin</a>,  <a href=\"https://novaposhta.ua/\">NovaPoshta</a> etc;<br> • <a href=\"https://www.nuget.org/profiles/KogerCoder\">Open-source development</a>;<br> • Architecture development, microservice architecture;<br> • Servers dev."
             },
             {
                 companyName: "R&D Team",
@@ -180,11 +181,10 @@ var dataObj = {
                 companyName: "FOZZY Group",
                 position: "TeamLead C# Developer",
                 companyLogos: [
-                    { fileName: "fozzy.png", width: 40, height: 40 },
-                    { fileName: "silpo.png", width: 80, height: 40 }
+                    { fileName: "fozzy.png", width: 40, height: 40 }
                 ],
                 dateOfWork: "Март 2021 – Май 2023",
-                text: " • Менторство. Управление командой разработчиков;<br> • Интеграция крупных систем: <a href=\"https://silpo.ua/\">Silpo</a>, <a href=\"https://maudau.com.ua/\">MauDau</a>, <a href=\"https://justin.ua/\">Justin</a>,  <a href=\"https://novaposhta.ua/\">NovaPoshta</a> и другие;<br> • <a href=\"https://www.nuget.org/profiles/KogerCoder\">Open-source разработка</a>;<br> • Разработка архитектуры приложений, микросервисная архитектура;<br> • Разработка серверов. Работа с облачными сервисами Azure, Amazon."
+                text: " • Менторство. Управление командой разработчиков;<br> • Интеграция крупных систем: <a href=\"https://silpo.ua/\">Silpo</a>, <a href=\"https://maudau.com.ua/\">MauDau</a>, <a href=\"https://justin.ua/\">Justin</a>,  <a href=\"https://novaposhta.ua/\">NovaPoshta</a> и другие;<br> • <a href=\"https://www.nuget.org/profiles/KogerCoder\">Open-source разработка</a>;<br> • Разработка архитектуры приложений, микросервисная архитектура;<br> • Разработка серверов."
             },
             {
                 companyName: "R&D Team",
@@ -257,10 +257,9 @@ var dataObj = {
                 position: "TeamLead C# Developer",
                 companyLogos: [
                     { fileName: "fozzy.png", width: 40, height: 40 }
-                    //{ fileName: "silpo.png", width: 80, height: 40 }
                 ],
                 dateOfWork: "Березень 2021 – Травень 2023",
-                text: " • Менторство. Управління командою розробників;<br> • Інтеграція великих систем: <a href=\"https://silpo.ua/\">Silpo</a>, <a href=\"https://maudau.com.ua/\">MauDau</a>, <a href=\"https://justin.ua/\">Justin</a>,  <a href=\"https://novaposhta.ua/\">NovaPoshta</a> та інші;<br> • <a href=\"https://www.nuget.org/profiles/KogerCoder\">Open-source розробка</a>;<br> • Розробка архітектури програм, мікросервісна архітектура;<br> • Розробка серверів. Робота з хмарними сервісами Azure, Amazon."
+                text: " • Менторство. Управління командою розробників;<br> • Інтеграція великих систем: <a href=\"https://silpo.ua/\">Silpo</a>, <a href=\"https://maudau.com.ua/\">MauDau</a>, <a href=\"https://justin.ua/\">Justin</a>,  <a href=\"https://novaposhta.ua/\">NovaPoshta</a> та інші;<br> • <a href=\"https://www.nuget.org/profiles/KogerCoder\">Open-source розробка</a>;<br> • Розробка архітектури програм, мікросервісна архітектура;<br> • Розробка серверів."
             },
             {
                 companyName: "R&D Team",

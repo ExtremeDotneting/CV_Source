@@ -26,13 +26,15 @@
                     </v-menu>
                 </div>
             </div>
-            <div class="text-md-h4 text-subtitle-1" style="margin-left: 140px;margin-top: 30px;">{{ myName }}</div>
-            <div class="text-md-h6 text-subtitle-2 font-italic" style="margin-left: 140px;">{{ workPosition }}</div>
+            <div class="text-md-h4 text-subtitle-1"
+                :style="`margin-left: ${leftMarginForNameAndWorkPosition}px;margin-top: 30px;`">{{ myName }}</div>
+            <div class="text-md-h6 text-subtitle-2 font-italic"
+                :style="`margin-left: ${leftMarginForNameAndWorkPosition}px;`">{{ workPosition }}</div>
         </v-card-title>
     </v-img>
 
 
-    <img id="portraitImg" src="/images/portraits/portrait.jpg" width="120" height="120"
+    <img v-if="showPortrait" id="portraitImg" src="/images/portraits/portrait.jpg" width="120" height="120"
         class="ml-sm-8 ml-5 rounded-sm elevation-9">
 
     <a :href="externalUrl" id="externalUrlElement" class="float-right " align="right">
@@ -56,6 +58,14 @@ export default {
     },
     props: {
         isPdfVersion: Boolean
+    },
+    computed: {
+        leftMarginForNameAndWorkPosition: function () {
+            if (this.showPortrait)
+                return 140;
+            else
+                return 10;
+        }
     },
     methods: {
         getCurrentTranslate() {
